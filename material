@@ -1,0 +1,77 @@
+import 'package:flutter/material.dart';
+voidmain(){
+    runAPP(MyApp());
+}
+class MYAPP extends statelesswidget{
+@override
+widget build(Buildcontext context){
+  return materialAPP(
+    title:'combined layout example';
+    home:seaffoid(
+      appbar:APPBar(title:Text('combined layout')),
+      body:padding(
+        padding:const Edgeinsets,all(16,0),
+        child:column(
+          children:[
+            row(
+              mainAxisAlignment:MainAxisAlignment.spaceBetween,
+              children:[
+                icon(icons.home,size:50,color:colors.blue),
+                icon(icons.star,size:50,color:color.yellow),
+                icon(icons.person,size:50,color:colors.green),
+              ]
+            )
+            sizedBox(height:20),
+            stack(
+              children:[
+                container(
+                  width:200,
+                  height:200,
+                  color:color.blue,),
+                  positioned(
+                    top:50,
+                    left:50,
+                    child:container(
+                      width:100,
+                      height:100,
+                      color:colors.yellow,
+                    )
+                  )
+                  positioned(
+                    top:75,
+                    left:75,
+                    child:container(
+                      width:50,
+                      height:50,
+                      color:colors.green;
+                    ),
+                  ),
+              ],
+            ),
+            sizedBox(height:20),
+            row(
+              mainAxesAlignment:MainAxisAlignment.center,
+              children:[
+                column(
+                  children:[
+                    icon(icons.access_alam,size:50,color:colors.purple),
+                    sizedBox(height:10),
+                    icon(icons.access_time,size:50,color:color.red),
+                  ],
+                ),
+                sizedBox(width:50),
+                column(
+                  children:[
+                    icon(icons.camera,size:50,color:colors.orange),
+                    sizedBox(height:10),
+                    icon(icons.phone,size:50,color:colors.teal),
+                  ],
+                ),
+              ],
+            ),
+          ]
+      ),
+    ),
+  ),
+}
+}
